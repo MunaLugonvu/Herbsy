@@ -1,2 +1,2 @@
 # Herbify
-Herbify is an e-commerce application for selling herbs and spices.
+Herbsy is an  application for selling herbs and spices, It also provides information on which hearbs help with which condition.
