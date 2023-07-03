@@ -148,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: Center(
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
-                                      horizontal: 17),
+                                      horizontal: 22),
                                   child: Text(
                                     category[index],
                                     style: TextStyle(
