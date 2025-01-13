@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/Herbsy/static/css/main.b72deaae.css",
-    "main.js": "/Herbsy/static/js/main.c85a10bb.js",
+    "main.css": "/Herbsy/static/css/main.b15c4f33.css",
+    "main.js": "/Herbsy/static/js/main.8af982a2.js",
     "static/js/488.e75445ad.chunk.js": "/Herbsy/static/js/488.e75445ad.chunk.js",
+    "static/media/logo.svg": "/Herbsy/static/media/logo.902d1a36d57ba2a06f13accdd4557aac.svg",
     "index.html": "/Herbsy/index.html",
-    "main.b72deaae.css.map": "/Herbsy/static/css/main.b72deaae.css.map",
-    "main.c85a10bb.js.map": "/Herbsy/static/js/main.c85a10bb.js.map",
+    "main.b15c4f33.css.map": "/Herbsy/static/css/main.b15c4f33.css.map",
+    "main.8af982a2.js.map": "/Herbsy/static/js/main.8af982a2.js.map",
     "488.e75445ad.chunk.js.map": "/Herbsy/static/js/488.e75445ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b72deaae.css",
-    "static/js/main.c85a10bb.js"
+    "static/css/main.b15c4f33.css",
+    "static/js/main.8af982a2.js"
   ]
 }
