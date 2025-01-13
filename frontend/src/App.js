@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import Header from './components/Header/header.jsx';
 import Footer from './components/Footer/footer.jsx';
 import SignIn from './Auth/signIn.jsx';
+import SignUp from './Auth/signup.jsx';
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
           <Route path="/products" element={<h2>Products Page</h2>} />
           <Route path="/about" element={<h2>About Herbsy</h2>} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/signout" element={<h2>Sign Out Page</h2>} />
+          <Route path="/signup" element={<SignUp/>} />
         </Routes>
       </Layout>
     </Router>
@@ -24,7 +25,7 @@ const Layout = ({ children }) => {
   const location = useLocation();
 
   // Define routes that should NOT have a header or footer
-  const noHeaderFooterRoutes = ['/signin', '/signout'];
+  const noHeaderFooterRoutes = ['/signin', '/signup'];
 
   return (
     <div className="flex flex-col min-h-screen">

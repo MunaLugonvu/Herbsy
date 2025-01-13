@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from '../components/Forms/form';
 
+
 const SignIn = () => {
     const fields = [
         { name: 'email', label: 'Email', type: 'email' },
@@ -11,10 +12,18 @@ const SignIn = () => {
         // Handle sign in logic here
         console.log('Sign In Data:', formData);
     };
-    
+
     return (
         <div>
-            <Form title="Sign in to your account" fields={fields} onSubmit={handleSignIn} />
+            <Form
+                title="Sign in to your account"
+                fields={fields}
+                onSubmit={handleSignIn}
+                buttonText="Sign In"
+                footerText="Don't have an account?"
+                footerLink="/signup"
+                footerLinkText="Sign Up"
+            />
         </div>
     );
 };
