@@ -4,13 +4,14 @@ import Header from './components/Header/header.jsx';
 import Footer from './components/Footer/footer.jsx';
 import SignIn from './Auth/signIn.jsx';
 import SignUp from './Auth/signup.jsx';
+import Home from './Pages/Home.jsx';
 
 const App = () => {
   return (
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<h2>Welcome to Herbsy</h2>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/products" element={<h2>Products Page</h2>} />
           <Route path="/about" element={<h2>About Herbsy</h2>} />
           <Route path="/signin" element={<SignIn />} />
