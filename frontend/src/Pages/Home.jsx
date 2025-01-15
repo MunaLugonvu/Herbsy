@@ -1,4 +1,5 @@
 import React from 'react';
+import FeaturedProducts from '../components/Products/featuredProducts';
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
         </div>                
     </div>
 </section>
+<FeaturedProducts />
     </>
   );
 };
