@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturedProducts from '../components/Products/featuredProducts';
 import FeaturedArticles from '../components/Articles/featuredArticles';
+import LearnSection from '../components/Articles/LearnSection';
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
 </section>
 <FeaturedProducts />
 <FeaturedArticles/>
+<LearnSection/>
     </>
   );
 };
