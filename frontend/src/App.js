@@ -8,17 +8,17 @@ import Home from './Pages/Home.jsx';
 
 const App = () => {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/products" element={<h2>Products Page</h2>} />
-          <Route path="/about" element={<h2>About Herbsy</h2>} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp/>} />
-        </Routes>
-      </Layout>
-    </Router>
+    <Router basename="/Herbsy">
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<h2>Products Page</h2>} />
+        <Route path="/about" element={<h2>About Herbsy</h2>} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+    </Layout>
+  </Router>
   );
 };
 
