@@ -2,6 +2,7 @@ import React from 'react';
 import FeaturedProducts from '../components/Products/featuredProducts';
 import FeaturedArticles from '../components/Articles/featuredArticles';
 import LearnSection from '../components/Articles/LearnSection';
+import CTASection from '../components/Cta/ctaSection';
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ const Home = () => {
 <FeaturedProducts />
 <FeaturedArticles/>
 <LearnSection/>
+<CTASection/>
     </>
   );
 };
