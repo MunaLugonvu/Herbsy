@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { products } from '../components/Products/featuredProducts';
 
-
 const Shop = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategories, setSelectedCategories] = useState([]);
@@ -17,7 +16,8 @@ const Shop = () => {
     const filteredProducts = products.filter((product) => {
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory =
-        selectedCategories.length === 0 || selectedCategories.some((cat) => product.category.includes(cat));
+        selectedCategories.length === 0 ||
+        selectedCategories.some((cat) => product.categories.includes(cat)); // Ensure "categories" is plural
       return matchesSearch && matchesCategory;
     });
   
@@ -55,32 +55,42 @@ const Shop = () => {
           </aside>
   
           {/* Products Grid */}
-          <main className="w-3/4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProducts.map((product) => (
-                <div
-                  key={product.id}
-                  className="bg-white rounded-lg shadow-md p-4 flex flex-col h-full"
-                >
-                  <h4 className="text-lg font-bold mb-2">{product.name}</h4>
-                  <p className="text-gray-600 flex-grow">{product.description}</p>
-                  <div className="mt-2">
-                    <span className="text-sm text-gray-500">
-                      {product.category.join(', ')}
-                    </span>
-                  </div>
-                  <button
-                    className="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-300"
-                  >
-                    Buy Now
-                  </button>
+           {/* Products Grid */}
+        <main className="w-3/4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProducts.map((product) => (
+              <div
+                key={product.id}
+                className="bg-white rounded-lg shadow-md p-4 flex flex-col h-full"
+              >
+                {/* Product Image */}
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-40 object-cover rounded-md mb-4"
+                />
+                {/* Product Details */}
+                <h4 className="text-lg font-bold mb-2">{product.name}</h4>
+                <p className="text-gray-600 mb-2 flex-grow">{product.description}</p>
+                <div className="mt-2">
+                  <span className="text-sm text-gray-500">
+                    {product.categories.join(', ')}
+                  </span>
                 </div>
-              ))}
-            </div>
-            {filteredProducts.length === 0 && (
-              <p className="text-center text-gray-500 mt-4">No products found.</p>
-            )}
-          </main>
+                {/* Product Price */}
+                <p className="text-green-600 font-bold mt-2">{product.price} UGX</p>
+                <button
+                  className="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-300"
+                >
+                  Buy Now
+                </button>
+              </div>
+            ))}
+          </div>
+          {filteredProducts.length === 0 && (
+            <p className="text-center text-gray-500 mt-4">No products found.</p>
+          )}
+        </main>
         </div>
       </div>
     );
