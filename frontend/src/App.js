@@ -5,6 +5,7 @@ import Footer from './components/Footer/footer.jsx';
 import SignIn from './Auth/signIn.jsx';
 import SignUp from './Auth/signup.jsx';
 import Home from './Pages/Home.jsx';
+import Shop from './Pages/Shop.jsx';
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<h2>Products Page</h2>} />
+        <Route path="/shop" element={<Shop/>} />
         <Route path="/about" element={<h2>About Herbsy</h2>} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
