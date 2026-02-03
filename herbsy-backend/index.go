@@ -1,28 +1,32 @@
 package main
 
 import (
-  "net/http"
+	"net/http"
+	"os"
 
-  "github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-  // Create a Gin router with default middleware (logger and recovery)
-  r := gin.Default()
+	// Create a Gin router with default middleware (logger and recovery)
+	r := gin.Default()
 
-  // Define a simple GET endpoint
-  r.GET("/pinga", func(c *gin.Context) {
-    // Return JSON response
-    c.JSON(http.StatusOK, gin.H{
-      "message": "pong",
-      "data":gin.H{
-        "name": "Muna",
-        "age": 24,
-      },
-    })
-  })
+	// Define a simple GET endpoint
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "pong",
+			"data": gin.H{
+				"message": "Muna is learning Go here",
+			},
+		})
+	})
 
-  // Start server on port 8080 (default)
-  // Server will listen on 0.0.0.0:8080 (localhost:8080 on Windows)
-  r.Run()
+	// Get the port from Render environment variable
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // fallback for local testing
+	}
+
+	// Start server on the Render-assigned port
+	r.Run(":" + port)
 }
