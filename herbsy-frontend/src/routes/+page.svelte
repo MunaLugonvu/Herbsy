@@ -1,6 +1,14 @@
 <script >
-    let name = 'Muna';
+   
 </script>
 
-<h1>Hello : {name}</h1>
-<p>Muna is Learning svelte</p>
+<div class="body">Hello You!</div>
+
+
+<style>
+    .body {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+    }   
+</style>
